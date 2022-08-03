@@ -36,7 +36,8 @@ class Userlist extends React.Component {
     }
 
     callAPI = () => {
-        axios.get("https://jsonplaceholder.typicode.com/users")
+        //axios.get("https://jsonplaceholder.typicode.com/users")
+        axios.get("http://localhost:1234/get/category/all")
             .then((response) => {
                 console.log(response)
                 console.log(response.data)
@@ -62,13 +63,10 @@ class Userlist extends React.Component {
         return this.state.users.map((comment) => {
             //console.log(comment)
             //console.log(comment.email)
-            console.log(comment.name + " from " + comment.address.city )
+            console.log(comment.name )
             return (
-                <User key={comment.id}
-                      email={comment.email}
-                      name={comment.name}
-                      city={comment.address.city}>
-                   
+                <User key={comment._id}
+                      name={comment.name}>
                 </User>
             )
 

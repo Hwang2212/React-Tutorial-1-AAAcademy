@@ -6,7 +6,7 @@ class User extends React.Component {
     render() { 
         return (
             <li>
-                {this.props.name} <span style={{fontWeight:"bold"}}>from</span> {this.props.city}
+                {this.props.name} 
             </li>
         );
     }
